@@ -3,14 +3,19 @@
 // https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
 document.addEventListener('DOMContentLoaded', start)
 
-function start () {
+function start(){
   // The first example is done for you. This will change the background colour of the first div
   // when you mouse over it.
   one()
   two()
+  three()
+  four()
+
+}
+
     
   // Your turn! Create a new function called `two`, then call it from here.
-}
+
 
 function one () {
   // First, we have to find the element:
@@ -37,8 +42,28 @@ function two () {
 }
 
 // CREATE FUNCTION three HERE
+function three () {
+  // First, we have to find the element:
+  var three = document.getElementById('three')
 
+  // Next, we add an event listener to it:
+  three.addEventListener('mouseenter', makeYellow)
+
+  // Finally, we add one to make the colour white again
+  three.addEventListener('mouseleave', makeWhite)
+}
 // CREATE FUNCTION four HERE
+function four () {
+  // First, we have to find the element:
+  var four = document.getElementById('four')
+
+  // Next, we add an event listener to it:
+  four.addEventListener('mouseenter', makeRed)
+
+  // Finally, we add one to make the colour white again
+  four.addEventListener('mouseleave', makeWhite)
+}
+
 
 // Changes the background color of event's target
 function makeBlue (evt) {
